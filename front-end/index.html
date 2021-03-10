@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="scripts/index.js"></script>
+</head>
+<body onload="list()">
+    <div class="container">
+        <div id='message'></div>
+        <h1 class="alert-info text-center">
+            Expense Management App
+        </h1>
+        <div class="form-group">
+            <label for="">Id</label>
+            <input id='id' onfocus="clearMessage()" type="text" class='form-control' placeholder="Type Id Here">
+        </div>
+
+        <div class="form-group">
+            <label for="">Name</label>
+            <input id='name' onfocus="clearMessage()" type="text" class='form-control' placeholder="Type Name Here">
+        </div>
+        <div class="form-group">
+            <label for="">Cost</label>
+            <input id='cost' onfocus="clearMessage()" type="range" class='form-range' >
+        </div>
+        <div class="form-group">
+            <label for="">Descr</label>
+            <textarea id='desc' onfocus="clearMessage()" class='form-control' cols="30" rows="5" placeholder="Type Desc Here"></textarea>
+        </div>
+        <br/>
+        <button onclick="add()" class='btn btn-primary'>Add</button>
+        <button onclick="list()" class='btn btn-primary'>List All</button>
+        <button onclick="deleteById()" class='btn btn-primary'>Delete by ID</button>
+        <button onclick="find()" class='btn btn-primary'>Find by ID</button>
+
+        <br/><br/>
+        <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Cost</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+
+              </tbody>
+        </table>
+    </div>
+</body>
+</html>
